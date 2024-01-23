@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;  
+}
+
+body {
+  font-size: 1.6rem;
+  background: #040924;
+  width: 100%;
+}
+
+body, input, label, button {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+ 
+}
+
+.card {
+  max-width: 42.8rem; 
+  padding: 4.8rem 5.0rem 6.4rem 5.0rem;
+
+  background: #FFF;
+  box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.10);
+  border-radius: 6px;
+}
+
+.title {
+  color: #0C3440;
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 4.0rem;
+}
+
+form h1 {
+  margin-bottom: 3.2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+form .input-wrapper label {
+  color: #00453A;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+}
+
+form input {
+  width: 100%;
+  padding: 1.6rem;
+  margin-top: 0.8rem;
+
+  color: #212529;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.0rem;
+
+  border-radius: 4px;
+  border: 1px solid rgba(73, 80, 87, 0.30);
+  background: #DCE2E9;
+}
+
+form input:focus {
+  outline: 1px solid #02799D;
+}
+
+form input::placeholder {
+  color: rgba(73, 80, 87, 0.50);
+}
+
+form button {
+  padding: 1.6rem;
+  margin-top: 3.2rem;
+
+  color: #FFF;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 2.0rem;
+  
+  padding: 1.6rem;
+  background: #02799D;
+  border: none;
+  border-radius: 0.4rem;
+
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  gap: .8rem;
+
+  cursor: pointer;
+  transition: background .3s;
+  width: 100%;
+}
+
+form button:hover {
+  background:#016c8d ;
+}
+
+/* modal */
+
+.modal-wrapper.open { /* Note que foi colocado a class open */
+  opacity: 1; /* Foi adicionado para retornar com a tela do resultado */
+  visibility: visible; /* Foi adicionado para retornar com a tela do resultado */
+}
+
+/* Com essas configurações quando tiver open apareceu e quando não tiver sumiu */
+
+.modal-wrapper { /* Note que não foi colocado a class open */
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.70);
+
+  display: grid;
+  place-content: center;
+
+  opacity: 0; /* Foi adicionado para retirar a tela do resultado */
+  visibility: hidden; /* Foi adicionado para retirar a tela do resultado */
+}
+
+.modal {
+  position: relative;
+}
+
+.modal button {
+  background: none;
+  border: none;
+
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+
+  cursor: pointer;
+
+  transition: transform .3s;
+}
+
+.modal button:hover {
+  transform: scale(1.1);
+}
+
+/*  alert error */
+
+.alert-error.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+
+.alert-error {
+  position: absolute;
+  background: #F03E3E;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #FFF;
+  padding: .8rem 0;
+  font-weight: 700;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-30px);
+  transition: transform .5s; 
+}
+
+

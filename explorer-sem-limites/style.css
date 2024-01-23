@@ -1,0 +1,394 @@
+/* GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+  --base-font: 'Mulish', sans-serif;
+  
+  --text-white: #FFF;
+  --text-violet-red: #B52184;
+  --text-night-blue: #312D64;
+  --ghost-white-background:#F9F4FB;
+  --gradient-background: linear-gradient(96deg, #343193 0%, #302C63 99.68%);
+}
+
+body {
+  font-family: var(--base-font);
+}
+
+/* SECTION EXPLORER */
+#explorer {
+  background: var(--ghost-white-background);
+  width: 100%; /* ATENÇÃO aplicado para as configurações no pai crescerem conforme a tela diminui ou aumenta de forma gradativa.*/
+  padding: 0 3.4rem 9.3rem 3.2rem;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+#explorer .astronaut img {
+  max-width: 100%; /* ATENÇÃO aplicado para as configurações na imagem crescerem conforme a tela diminui ou aumenta de forma gradativa. */
+
+  animation-name: appear;
+  animation-duration: 2s;
+  animation-delay: 0;  
+}
+
+#explorer h1 {
+color: var(--text-violet-red);
+font-size: 3.2rem;
+font-weight: 900;
+text-align: center;
+margin: 1.7rem 0 0.5rem 0;
+}
+
+#explorer p {
+color: var(--text-night-blue);
+font-size: 2.0rem;
+font-weight: 600;
+text-align: center;
+margin-bottom: 3.5rem;
+}
+
+#explorer .arrow {
+  width: 5.8rem; /* ATENÇÃO */
+  height: 10.5rem; /* ATENÇÃO */
+  margin: 0 auto;
+  cursor: pointer;
+  transition-property: filter 300ms;
+}
+
+#explorer .arrow:hover {
+  filter: brightness(0.7);
+}
+
+/* SECTION CARDS */
+
+#cards {
+  background: var(--gradient-background);
+  padding: 5.3rem 3.9rem 5.5rem;
+  width: 100%; /* ATENÇÃO aplicado para as configurações no pai crescerem conforme a tela diminui ou aumenta de forma gradativa.*/
+  height: 100%; /* ATENÇÃO */
+}
+
+#cards .cards-box {
+  display: grid;
+  gap: 4.9rem;
+  
+}
+
+#cards .card {
+  background-color: var(--text-white);
+  padding: 2.6rem;
+  border-radius: 2.0rem;
+}
+
+@keyframes appear{
+  0% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+#cards .card img {
+  width: 8.0rem;  /* ATENÇÃO */
+  margin-bottom: 3.3rem;
+
+  transition-property: transform, filter;
+  transition-duration: 2s;
+  transition-delay: 0;
+  transition-timing-function: ease-out;
+
+  --delay: 0.4s;
+  animation-name: appear;
+  animation-duration: var(--delay);
+  animation-fill-mode: backwards;
+}
+
+#cards .card img:hover {
+  transform: scale(1.4) rotate(720deg);
+  filter: saturate(120%) brightness(120%);
+}
+
+#cards .card .card-text {
+  width: 26.5rem;  /* ATENÇÃO *//* ATENÇÃO *//* ATENÇÃO *//* ATENÇÃO */
+}
+
+#cards .card h1 {
+  color: var(--text-violet-red);
+  font-size: 2.9rem;
+  font-weight: 900;
+  margin-bottom: 1.9rem;
+  cursor: pointer;
+}
+
+#cards .card h1:hover {
+color: #b52184e7;
+text-decoration: underline;
+zoom: 100.5%;
+}
+
+#cards .card p {
+  color: var(--text-night-blue);
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+/* SECTION CONTACT */
+
+#contact {
+  background-color: var(--ghost-white-background);
+  width: 100%; /* ATENÇÃO aplicado para as configurações no pai crescerem conforme a tela diminui ou aumenta de forma gradativa.*/
+  height: 100%; /* ATENÇÃO */  
+}
+
+#contact form {
+  padding: 7.8rem 3.9rem 6.5rem 4.0rem;
+}
+
+#contact form h1 {
+  color: var(--text-violet-red);
+  font-size: 3.2rem;
+  font-weight: 900;
+  width: 27.2rem; 
+  margin-bottom: 4.3rem;
+}
+
+#contact form fieldset {
+  border: none;
+  display: grid;
+  gap: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+
+#contact form .input-wrapper label {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+#name {
+background-image: url(/intensivao-v2/assets/person.svg);
+background-repeat: no-repeat;
+background-position-x: 1.4rem;
+background-position-y: 1.2rem;
+}
+
+#email {
+  background-image: url(/intensivao-v2/assets/at.svg);
+  background-repeat: no-repeat;
+  background-position-x: 1.4rem;
+  background-position-y: 1.2rem;
+}
+
+#contact form fieldset input, #contact form fieldset textarea {
+  border-radius: 1.6rem;
+  width: 34.8rem; /* ATENÇÃO */
+  padding: 1.2rem 1.6rem 1.2rem 1.4rem;
+  border: 1.5px solid var(--text-night-blue);
+
+  color: var(--text-night-blue);
+  font-family: var(--base-font);
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.6rem;
+  padding-left: 5.0rem;
+}
+
+#contact form fieldset textarea {
+  padding: 1.2rem 1.6rem 1.6rem 1.6rem;
+}
+
+#contact form fieldset textarea {
+ height: 12.6rem;
+}
+
+#contact form fieldset input::placeholder {
+color: var(--text-night-blue);
+font-size: 1.6rem;
+font-weight: 600;
+}
+
+button {
+  background: var(--gradient-background);
+  border-radius: 1.6rem;
+  border: none;
+  padding: 1.6rem;
+
+  color: var(--text-white);
+  font-family: var(--base-font);
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  cursor: pointer;
+}
+
+button:hover {
+  zoom: 101%;
+  filter: brightness(102%);
+}
+
+/* FOOTER */
+footer {
+  background: var(--gradient-background);
+  padding: 1.6rem;
+}
+
+footer {
+  color: var(--text-white);
+  font-family: var(--base-font);
+  font-size: 1.9rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 16px;
+}
+
+@media (min-width: 431px) {
+
+  #explorer .astronaut img {
+    display: block;
+    max-width: 36.4rem; /* ATENÇÃO - tamanho da imagem limitado, se eu não fizesse isso a imagem ia crescer ... ficando diferente em relação aos outros elementos. */
+    margin: 0 auto;
+  }
+
+  #cards .card {
+    max-width: 35.2rem; /* ATENÇÃO - tamanho da caixa limitado, se eu não fizesse isso a caixa ia crescer ... ficando diferente em relação aos outros elementos. */
+    margin: 0 auto;
+  }
+
+  #contact form {
+    max-width: 35.1rem; /* ATENÇÃO - tamanho da caixa limitado, se eu não fizesse isso a caixa ia crescer ... ficando diferente em relação aos outros elementos. */
+    margin: 0 auto;
+    padding: 7.8rem 3.9rem 6.5rem 2.0rem;
+  }
+}
+
+@media (min-width: 1440px) {
+ 
+  /* EXPLORER */
+  #explorer .explorer-box {
+    max-width: 144.0rem;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  #explorer .astronaut img {
+    max-width: 72.0rem; 
+  }
+
+  #explorer .title-arrow h1 {
+    font-size: 5.8rem;
+    margin: 0;
+    width: 55.4rem;
+  }
+
+  #explorer .title-arrow p {
+    font-size: 3.2rem;
+    margin: 0;
+  }
+
+  #explorer .title-arrow {
+    order: 1;
+    margin-top: 31.2rem;
+    margin-left: 10.9rem;
+  }
+
+  #explorer .astronaut {
+    order: 2;
+  }
+
+  #explorer .arrow {
+    margin: 0;
+    margin-top: 17.9rem;
+  }
+
+  /* CARDS */
+
+  #cards .cards-box {
+    max-width: 144.0rem; /* ATENÇÃO - tamanho da caixa limitado, se eu não fizesse isso os meus elementos iam se espalhar por toda tela ficando sem um posicionamento definido ... */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin-inline: auto;
+  }
+
+  #cards .card {
+    width: 36.6rem;
+    height: 44.8rem;   
+  }
+
+  #cards .card img {
+    width: 9.7rem;
+  }
+
+  #cards .card .card-text {
+    width: 32.1rem;
+    height: 15.8rem;
+  }
+
+  #cards .card .card-text h1 {
+    font-size: 3.5rem;
+  }
+
+  #cards .card .card-text p {
+    font-size: 2.0rem;
+  }
+
+  /* CONTACT */
+  #contact {
+    background-image: url(/intensivao-v2/assets/stars.png);
+    background-repeat: no-repeat;
+    background-position: right;  
+  }
+
+  #contact .contact-box {
+    padding: 9.5rem 9.2rem 9.5rem 10.9rem;
+    max-width: 144.0rem;  /* ATENÇÃO - tamanho da caixa limitado, se eu não fizesse isso os meus elementos iam se espalhar por toda tela ficando sem um posicionamento definido ... */
+    margin: 0 auto;
+  }
+
+  #contact form {
+    margin: 0;
+    padding: 0;
+  }
+
+  #contact form h1 {
+    font-size: 4.2rem;
+    width: 35.7rem;
+  }
+
+  #contact form fieldset input, #contact form fieldset textarea {
+    width: 59.2rem;
+  }
+
+  #contact form fieldset textarea {
+    height: 12.6rem;
+  }
+
+  /* FOOTER */
+  footer {
+    /*max-width: 144.0rem;*/
+
+  }
+
+}
+
