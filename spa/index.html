@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPA</title>
+</head>
+
+<body>
+  <nav>
+    <a href="/" onclick="route()">Home</a>
+    <a href="/about" onclick="route()">Sobre</a>
+    <a href="/contact" onclick="route()">Contato</a>
+    <a href="/404" onclick="route()">404</a>
+  </nav>
+
+  <div id="app"></div>
+
+  <script src="/js/index.js" type="module"></script>
+
+</body>
+
+</html>
+
+<!--
+  Este é o esqueleto básico de uma página HTML. O elemento <nav> contém links para diferentes partes do site. Quando um link é clicado, a função route() é chamada. O elemento <div id="app"></div> é onde o conteúdo das páginas será carregado. O script /js/index.js é importado e executado.
+-->
