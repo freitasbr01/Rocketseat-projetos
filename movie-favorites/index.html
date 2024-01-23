@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MovieFav</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <script src="js/main.js" type="module" defer></script>
+</head>
+
+<body>
+  <div id="app">
+
+    <header>
+      <img class="skull" src="/assets/kisspng-piracy-logo-jolly-roger-vought-f4u-corsair-grumman-pirate-collection-design-5af289d0186a31.1740189615258444321.png" alt="logo skull">
+      <img class="netflix" src="/assets/580b57fcd9996e24bc43c529.png" alt="Logo NetFlix">
+      <div class="search">
+        <label class="sr-only" for="input-search">Digite o nome do filme favorito</label>
+        <input id="input-search" type="text" placeholder="Digite o nome do filme favorito">
+        <button>&star;<span>Favoritar</span></button>
+      </div>
+    </header>
+
+    <div class="table-container">
+
+      <div class="table-thead">
+        <table>
+          <thead>
+            <tr>
+              <th class="usuario">Filme</th>
+              <th>Genero</th>
+              <th>Avaliação</th>
+              <th>Ação</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+
+      <div class="table-tbody">
+        <table>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* faz com que o fundo da barra de rolagem seja transparente no Firefox. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #e5091404;
+}
+
+/* faz o mesmo para o Chrome, Edge e Safari1. */
+/* Deixa o transparente no Chrome, Edge e Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #e509145e;
+  border-radius: 20px;
+  border: 3px solid transparent;
+}
+
+
+:root {
+  font-size: 62.5%;
+
+  --text-primary: "Poppins", sans-serif;
+  --background-color: #14141496;
+  --text-color: rgba(255, 255, 255, 0.918);
+  --head-color: #940c13;
+  --line-color: #e5091405;
+  --button-color: #e50914dc;
+  --remove-color: rgba(255, 255, 255, 0.918);;
+}
+
+body {
+  width: 100%;
+  /*background: var(--background-color);*/
+  color: var(--text-color);
+
+  font-size: 1.6rem;
+  font-family: var(--text-primary);
+
+  /*background: linear-gradient(150deg, #141414, #141414e3);*/
+  background: linear-gradient(160deg, #000000, #642f2f);
+  height: 100vh;
+}
+
+
+
+
+#app {
+  width: 144.0rem;
+  margin: 0 auto;
+}
+
+header {
+  width: 120.0rem;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  place-content: space-between;
+  margin-top: 8.0rem;
+  margin-bottom: 6.0rem;
+}
+
+header .netflix {
+  max-width: 250px;
+}
+
+header .skull {
+  max-width: 150px;
+}
+
+header span {
+  margin-left: 10px;  
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.search input {
+  width: 30.0rem;
+  height: 5.0rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+  font-size: 1.6rem;  
+
+  border-radius: .6rem;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  background: var(--line-color);
+  color: var(--text-primary);
+}
+
+.search button {
+  width: 13.0rem;
+  height: 4.5rem;
+
+  font-family: var(--text-primary);
+  text-transform: uppercase;
+  font-size: 1.6rem;  
+  
+  border-radius: .6rem;
+  background: var(--button-color);
+  color: var(--text-color);
+
+  border: none;
+  cursor: pointer;
+}
+
+.search button:hover {
+  filter: brightness(1.1)
+}
+
+
+/* TABELA */
+.table-container {
+  width: 119.0rem;
+  margin: 0 auto;
+
+  border: 1px solid #940c13a9;
+  border-radius: 1rem;
+  overflow: hidden;
+
+  max-height: 60.0rem;
+}
+
+.table-tbody { 
+  overflow-y: auto;
+  max-height: 60.0rem;
+}
+
+table {
+  font-size: 1.4rem;
+  width: 119.0rem;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.table-thead, .table-tbody {
+  width: 100%;
+}
+
+.table-thead th, .table-tbody td {
+  width: 24.70%; 
+  margin-left: 20px;
+  padding: 2.0rem;
+}
+
+table th{
+  background: var(--head-color);
+
+  text-align: left;
+  
+  font-weight: normal;
+
+  position: sticky;
+  top: 0;
+}
+
+table .usuario {
+  padding-left: 4.5rem;;
+}
+
+
+td.user img {
+  width: 5rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+table tbody tr:nth-child(odd) {
+  background: var(--background-color);
+}
+
+table tbody tr:nth-child(even) {
+  background: var(--line-color);
+  border-top: 1px solid #940c13a9;
+  border-bottom: 1px solid #940c13a9;
+}
+
+table td.user {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+}
+
+table td.user a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: normal;
+
+}
+
+table td.user a p {
+font-weight: bold;
+
+}
+
+table .remove {
+  border: none;
+  background-color: transparent;
+  color: var(--remove-color);
+  font-weight: bold;
+  cursor: pointer;
+}
+
